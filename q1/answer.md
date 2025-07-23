@@ -1,8 +1,8 @@
-# Public Data Sharing Implementation Guide
+# Proposal: Transforming Your Database into a Public Resource
 
-## Meeting with Data Provider: Making Postgres Database Publicly Accessible
 
-**Objective:** Transform your database into a discoverable and freely accessible public resource for government
+## Objective
+Transform your database into a discoverable and freely accessible public resource for government
 departments and the general public
 
 ---
@@ -10,7 +10,7 @@ departments and the general public
 ## Agenda Overview
 
 ```mermaid
-flowchart TD
+flowchart LR
     A[Discovery Phase] --> B[Data Assessment]
     B --> C[Public Access Requirements]
     C --> D[Implementation Planning]
@@ -60,49 +60,65 @@ flowchart TD
 
 ### Essential Metadata for Public Discovery
 
-```
-Public Data Catalog
-├── Technical Metadata
-│   ├── Data Types & Formats
-│   ├── Field Descriptions (Plain Language)
-│   ├── Data Quality Indicators
-│   ├── Update Frequency & Schedule
-│   └── API Endpoints & Access Methods
-├── Public-Facing Metadata
-│   ├── Dataset Title & Description
-│   ├── Keywords & Tags
-│   ├── Open Data License (CC, OGL, etc.)
-│   ├── Usage Examples & Tutorials
-│   ├── Contact Information
-│   └── Feedback Mechanisms
-├── Business Context
-│   ├── Purpose & Intended Use
-│   ├── Data Collection Methods
-│   ├── Limitations & Caveats
-│   ├── Related Datasets
-│   └── Success Stories
-└── Compliance & Governance
-    ├── Privacy Assessment Status
-    ├── Data Classification Level
-    ├── Retention Schedule
-    ├── Access Logs (Public Stats)
-    └── Quality Assurance Results
-```
+A well-structured public data catalog is crucial for making your data accessible and usable. It ensures that users can
+easily find, understand, and trust the information you provide. Here's a breakdown of the key categories and their
+essential elements:
 
-### Public Data Dictionary Components
+### Technical Metadata
 
-- **Citizen-friendly documentation**
-    - Plain language explanations (no technical jargon)
-    - Real-world examples and use cases
-    - Visual data samples and previews
-- **Open data standards compliance**
-    - DCAT (Data Catalog Vocabulary) metadata
-    - Schema.org structured data
-    - W3C accessibility guidelines
-- **Public engagement features**
-    - User rating and feedback systems
-    - Download statistics and usage metrics
-    - Community-contributed examples
+This section provides the nitty-gritty details that developers and advanced users will appreciate, ensuring they can
+work with the data effectively.
+
+- **Data Types & Formats:** Clearly define the format of your data (e.g., CSV, JSON, XML) and the specific data types
+  for each field (e.g., string, integer, date).
+- **Field Descriptions (Plain Language):** While technical, ensure that even the field descriptions are understandable
+  to a broader audience, avoiding excessive jargon.
+- **Data Quality Indicators:** Provide insights into the quality of the data, such as completeness percentages or known
+  limitations.
+- **Update Frequency & Schedule:** Let users know how often the data is updated, whether it's real-time, daily, weekly,
+  or on another schedule.
+- **API Endpoints & Access Methods:** If applicable, list the API endpoints and explain how users can access the data
+  programmatically.
+
+### Public-Facing Metadata
+
+This is what most public users will see first. It's designed for easy discovery and to encourage engagement.
+
+- **Dataset Title & Description:** A clear, concise, and compelling title along with a plain-language description of
+  what the dataset contains and its purpose.
+- **Keywords & Tags:** Relevant keywords and tags help users find the dataset through search.
+- **Open Data License (CC, OGL, etc.):** Specify the license under which the data is made available (e.g., Creative
+  Commons, Open Government License), clarifying usage rights.
+- **Usage Examples & Tutorials:** Provide practical examples or short tutorials to demonstrate how the data can be used,
+  inspiring creativity.
+- **Contact Information:** Offer clear contact details for users who have questions or need support.
+- **Feedback Mechanisms:** Provide a way for users to give feedback, report issues, or suggest improvements.
+
+### Business Context
+
+Understanding the "why" and "how" of the data adds significant value, giving users a complete picture.
+
+- **Purpose & Intended Use:** Explain the original purpose for which the data was collected and its intended uses.
+- **Data Collection Methods:** Describe how the data was gathered, which can help users assess its reliability and
+  potential biases.
+- **Limitations & Caveats:** Be transparent about any known limitations, caveats, or potential inaccuracies in the data.
+- **Related Datasets:** Link to other relevant datasets that might provide additional context or complementary
+  information.
+- **Success Stories:** Highlight examples of how the data has been used effectively, inspiring others to leverage it.
+
+### Compliance & Governance
+
+This section addresses the legal, ethical, and operational aspects, building trust and ensuring responsible data
+sharing.
+
+- **Privacy Assessment Status:** Indicate whether a Privacy Impact Assessment (PIA) has been conducted and its general
+  findings regarding public release.
+- **Data Classification Level:** Specify the sensitivity or classification level of the public data.
+- **Retention Schedule:** Inform users about how long the data will be retained and available.
+- **Access Logs (Public Stats):** Share aggregated public usage statistics to show the impact and interest in the
+  dataset.
+- **Quality Assurance Results:** Provide information on the quality assurance processes applied to the data before
+  public release.
 
 ---
 
@@ -357,7 +373,6 @@ interest and diverse use cases
 
 - Database can handle public API load
 - Technical team available for public developer support
-- Budget $25K-$50K available for public-facing infrastructure
 - Public user base comfortable with technical integration
 
 ##### When to Choose Open Data Portal Integration
@@ -373,7 +388,6 @@ interest and diverse use cases
 **Required Conditions:**
 
 - Long-term public commitment (2+ years)
-- Budget $50K+ available for comprehensive public access
 - Dedicated team for public data governance
 - Complex relationships requiring professional presentation
 
@@ -389,7 +403,6 @@ interest and diverse use cases
 
 **Required Conditions:**
 
-- Budget $75K+ available for comprehensive public infrastructure
 - Phased implementation acceptable for iterative public value
 - Strong cross-government technical and policy team
 - Long-term strategic importance to public service delivery
