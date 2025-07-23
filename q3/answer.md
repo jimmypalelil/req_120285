@@ -194,7 +194,7 @@ graph LR
 
 ### 1. Extract Phase
 
-**Data Source**: Washington State Open Data Portal  
+**Data Source**: url to download the csv file
 **Format**: CSV via REST API  
 **Size**: ~200,000+ vehicle registrations  
 **Update Frequency**: Real-time government updates
@@ -320,7 +320,7 @@ graph TD
 - **Model Year**: Range validation (1990-2030)
 - **Electric Range**: Non-negative values only
 - **Base MSRP**: Non-negative values or zero
-- **Geographic Data**: Coordinate validation for Washington State bounds
+- **Geographic Data**: Coordinate validation
 - **VIN Validation**: Format checking and privacy hashing
 
 ## Performance Benchmarks
